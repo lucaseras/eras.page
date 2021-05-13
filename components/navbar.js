@@ -4,17 +4,17 @@ import {useState} from 'react'
 
 const items = [
     {
-        title: "Home",
+        title: "/home",
         url: "#",
         cName: 'nav-links'
     },
     {
-        title: "About",
+        title: "/about",
         url: "about",
         cName: 'nav-links'
     },
     {
-        title: "Contact",
+        title: "/contact",
         url: "contact"
     }
 
