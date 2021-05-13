@@ -24,7 +24,7 @@ export default function Navbar() {
 
     return (
         <nav className={styles.navbar}>
-        <h1 className={styles.h1}>Lucas Eras Paiva</h1>
+        <h1 className={styles.h1}>eras.page</h1>
         <ul className={styles.ul}>
             {items.map((item, index) => {
                 return (

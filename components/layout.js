@@ -5,8 +5,8 @@ import utilStyles from '../styles/utils.module.css'
 import Navbar from '../components/navbar'
 import Link from 'next/link'
 
-const name = "Lucas Eras Paiva"
-export const siteTitle = 'Next.js Sample Website'
+const name = "eras.page"
+export const siteTitle = 'eras.page'
 
 export default function Layout({ children, home }) {
 const old_header = (
