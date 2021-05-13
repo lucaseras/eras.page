@@ -1,0 +1,44 @@
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height:60px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.h1 {
+    float: left;
+    margin: 0 0 0 6rem;
+    font-size: 1.2rem;
+    color: black;
+    white-space: nowrap;
+
+}
+.ul {
+    list-style: none;
+    margin: 0 6rem 0 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+.li {
+    float: right;
+}
+
+.a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.a:hover {
+    background-color: #0070f3;
+    color: white;
+}
+
