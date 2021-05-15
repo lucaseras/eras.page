@@ -1,6 +1,7 @@
-// React component that defines the navigation bar
+import Link from 'next/link'
 import styles from './navbar.module.css'
 import {useState} from 'react'
+// React component that defines the navigation bar
 
 const items = [
     {
@@ -13,11 +14,11 @@ const items = [
         cName: 'nav-links'
     },
 
-    {
-        title: "/home",
-        url: "#",
-        cName: 'nav-links'
-    }
+    //{
+        //title: "/home",
+        //url: "#",
+        //cName: 'nav-links'
+    //}
 
 ]
 
@@ -25,7 +26,11 @@ export default function Navbar() {
 
     return (
         <nav className={styles.navbar}>
-        <h1 className={styles.h1}>eras.page</h1>
+            <Link href='/'>
+                <h1 className={styles.h1}>
+                    <a className={styles.a}>eras.page</a>
+                </h1>
+            </Link>
         <ul className={styles.ul}>
             {items.map((item, index) => {
                 return (

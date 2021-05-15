@@ -27,6 +27,8 @@
 
 .li {
     float: right;
+    white-space: nowrap;
+    display: inline;
 }
 
 .a {
@@ -36,6 +38,7 @@
   text-align: center;
   padding: 0 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .a:hover {
