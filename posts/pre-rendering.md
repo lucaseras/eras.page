@@ -1,5 +1,6 @@
 ---
 title: 'Two Forms of Pre-rendering'
+author: 'Lucas Eras Paiva'
 date: '2020-01-01'
 ---
 
