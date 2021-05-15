@@ -10,7 +10,7 @@
 
 .h1 {
     float: left;
-    margin: 0 0 0 9rem;
+    margin: 0 0 0 10%;
     font-size: 1.2rem;
     color: black;
     white-space: nowrap;
@@ -18,7 +18,7 @@
 }
 .ul {
     list-style: none;
-    margin: 0 7rem 0 0;
+    margin: 0 10% 0 0;
     padding: 0;
     overflow: hidden;
     top: 0;
@@ -27,14 +27,18 @@
 
 .li {
     float: right;
+    white-space: nowrap;
+    display: inline;
 }
 
 .a {
   display: block;
   color: black;
+  font-family: hack, 'fira code', helvetica;
   text-align: center;
   padding: 0 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .a:hover {
