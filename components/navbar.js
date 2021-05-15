@@ -42,7 +42,7 @@ export default function Navbar() {
         };
     });
     const navbarStyle = {
-        background: `linear-gradient(to bottom, rgba(240,240,240, ${backgroundOpacity}) 85%, rgba(240, 240, 240, 0))`
+        background: `linear-gradient(to bottom, rgba(255,255,255, ${backgroundOpacity}) 85%, rgba(255, 255, 255, 0))`
         //backgroundColor: `rgba(240,240,240, ${backgroundOpacity})`
     }
 
