@@ -8,6 +8,12 @@ body {
   font-size: 18px;
 }
 
+@media screen and (max-width: 500px) {
+    html, body {
+        font-size: 13px;
+    }
+}
+
 html {
     overflow-y: overlay;
 }
