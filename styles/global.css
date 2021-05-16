@@ -8,6 +8,14 @@ body {
   font-size: 18px;
 }
 
+@font-face {
+    font-family: 'Hack';
+    src: url('/fonts/Hack/Hack-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }

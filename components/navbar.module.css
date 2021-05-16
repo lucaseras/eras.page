@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    padding: 0 10% 0 10%;
+    padding: 0 17% 0 17%;
 }
 
 .h1 {
@@ -21,8 +21,7 @@
 .ul {
     list-style: none;
     padding: 0;
-    overflow: hidden;
-    display: flex;
+    display: inline-flex;
     top: 0;
 }
 
@@ -35,9 +34,9 @@
   transition: background-color 0.3s, color 0.3s;
   display: block;
   color: black;
-  font-family: hack, 'fira code', helvetica;
+  font-family: 'Hack', 'fira code', helvetica;
   text-align: center;
-  padding: 0 10px;
+  margin: 0 1.5rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -47,12 +46,13 @@
         padding: 0 7% 0 7%;
     }
     .a {
-        font-size: 16px
+        font-size: 18px;
+        margin: 0 0.8rem;
+
     }
 }
 
 
 .a:hover {
-    background-color: #0070f3;
-    color: white;
+    -color: #0070f3;
 }
