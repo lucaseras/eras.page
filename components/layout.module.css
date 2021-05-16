@@ -4,10 +4,3 @@
     margin: 2rem auto 6rem;
     min-width: 250px;
 }
-
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-

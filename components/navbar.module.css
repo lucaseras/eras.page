@@ -4,10 +4,10 @@
     top: 0;
     height:60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-size: 1.2rem;
-    padding: 0 17% 0 17%;
+    padding: 0 5% 0 5%;
 }
 
 .h1 {
@@ -21,18 +21,19 @@
 .ul {
     list-style: none;
     padding: 0;
-    display: inline-flex;
+    display: block;
     top: 0;
 }
 
 .li {
     overflow: hidden;
     white-space: nowrap;
+    display: inline;
 }
 
 .a {
   transition: background-color 0.3s, color 0.3s;
-  display: block;
+  display: inline;
   color: black;
   font-family: 'Hack', 'fira code', helvetica;
   text-align: center;
@@ -43,16 +44,16 @@
 
 @media screen and (max-width: 500px) {
     .navbar {
-        padding: 0 7% 0 7%;
+        padding: 0 2% 0 2%;
     }
     .a {
-        font-size: 18px;
-        margin: 0 0.8rem;
+        font-size: 15px;
+        margin: 0 0.6rem;
 
     }
 }
 
 
 .a:hover {
-    -color: #0070f3;
+    color: #0070f3;
 }
