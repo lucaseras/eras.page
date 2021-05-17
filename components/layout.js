@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
 import Navbar from '../components/navbar'
+import Footer from '../components/footer'
 import Link from 'next/link'
 
 export const siteTitle = 'eras.page'
 
 export default function Layout({ children, home }) {
     return (
-        <>
+        <div className={styles.mainContainer}>
         <Head>
             <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
         </Head>
@@ -21,8 +22,9 @@ export default function Layout({ children, home }) {
                     </Link>
                 </div>
             )}
-            <main>{children}</main>
+                <main>{children}</main>
+            </div>
+            <Footer></Footer>
         </div>
-        </>
 )
 } 
