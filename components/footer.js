@@ -39,7 +39,8 @@ export default function bottom() {
     if (width > 500) {
         return (
             <div className={styles.main}>
-                <p className={styles.text}>Made by Lucas Eras using React.js and Next.js
+                <p className={styles.text}>
+                    Made by Lucas Eras using React.js and Next.js
                 </p>
                     <div className={styles.logos}>
                     {githubLogo}
