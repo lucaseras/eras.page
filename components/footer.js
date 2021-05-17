@@ -39,8 +39,9 @@ export default function bottom() {
     if (width > 500) {
         return (
             <div className={styles.main}>
-                Made by Lucas Eras using React.js and Next.js
-                <div className={styles.logos}>
+                <p className={styles.text}>Made by Lucas Eras using React.js and Next.js
+                </p>
+                    <div className={styles.logos}>
                     {githubLogo}
                     {linkedinLogo}
                 </div>
@@ -49,7 +50,7 @@ export default function bottom() {
     } else {
         return (
             <div className={styles.main}>
-                Made by Lucas Eras
+                <p className={styles.text}>Made by Lucas Eras</p>
                 <div className={styles.logos}>
                     {githubLogo}
                     {linkedinLogo}

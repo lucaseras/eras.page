@@ -1,17 +1,19 @@
 .main {
     font-family: 'Hack';
     font-size: 11pt;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto 0 auto;
     height: 7rem;
     padding: 1rem;
-    justify-content: space-evenly;
+    background-color: white;
+}
 
+.text {
+    text-align: center;
+    margin: 0 auto 0 auto;
 }
 
 .logos {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    margin: 0.5rem auto;
     gap: 12px;
 }
