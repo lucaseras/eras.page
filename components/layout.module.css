@@ -1,13 +1,14 @@
 .container {
     max-width: 36rem;
     padding: 0 1rem;
-    margin: 1rem auto 6rem;
     min-width: 250px;
+    width: 60vw;
     flex:1;
 }
 
 .mainContainer {
     display: flex;
+    align-items:center;
     flex-direction: column;
     min-height: 100vh;
 }
