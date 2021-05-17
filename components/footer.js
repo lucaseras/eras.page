@@ -33,6 +33,14 @@ const linkedinLogo = (
     </Link>
 )
 
+const madeByText = (width) => {
+    if (width > 500) {
+        return "Made by Lucas Eras using React.js and Next.js"
+    } else {
+        return "Made by Lucas Eras"
+    }
+}
+
 export default function bottom() {
     const {width} = useWindowDimensions();
 
@@ -40,7 +48,7 @@ export default function bottom() {
         return (
             <div className={styles.main}>
                 <p className={styles.text}>
-                    Made by Lucas Eras using React.js and Next.js
+                    {madeByText(width)}
                 </p>
                     <div className={styles.logos}>
                     {githubLogo}
