@@ -50,7 +50,7 @@ export default function bottom() {
     } else {
         return (
             <div className={styles.main}>
-                Made by Lucas Eras
+                <p className={styles.text}>Made by Lucas Eras</p>
                 <div className={styles.logos}>
                     {githubLogo}
                     {linkedinLogo}
