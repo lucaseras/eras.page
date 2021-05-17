@@ -44,8 +44,7 @@ const madeByText = (width) => {
 export default function bottom() {
     const {width} = useWindowDimensions();
 
-    if (width > 500) {
-        return (
+    return (
             <div className={styles.main}>
                 <p className={styles.text}>
                     {madeByText(width)}
@@ -55,17 +54,5 @@ export default function bottom() {
                     {linkedinLogo}
                 </div>
             </div>
-        )
-    } else {
-        return (
-            <div className={styles.main}>
-                <p className={styles.text}>Made by Lucas Eras</p>
-                <div className={styles.logos}>
-                    {githubLogo}
-                    {linkedinLogo}
-                </div>
-            </div>
-        )
-
-    }
+    )
 }
