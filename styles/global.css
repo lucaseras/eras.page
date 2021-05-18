@@ -33,12 +33,15 @@ html {
 }
 
 a {
-  color: #0070f3;
-  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+    color: #0070f3;
 }
 
 img {
