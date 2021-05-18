@@ -12,7 +12,6 @@ export default function Layout({ children, home }) {
         <Head>
             <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
         </Head>
-
         <Navbar></Navbar>
         <div className={styles.container}>
             {!home && (
