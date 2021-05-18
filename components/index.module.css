@@ -48,13 +48,12 @@
 /*Content for projects*/
 
 .projects {
-    display: flex;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
     flex-wrap:wrap;
-    justify-content: space-around;
     column-gap: 20px;
+    justify-content:center;
 }
-
 
 .project {
     width: 330px;
