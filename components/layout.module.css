@@ -1,8 +1,8 @@
 .container {
-    max-width: 36rem;
-    padding: 0 1rem;
+    max-width: 40rem;
     min-width: 250px;
-    width: 65%;
+    padding: 0 1rem;
+    width: 100%;
     flex:1;
 }
 
