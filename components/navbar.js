@@ -9,16 +9,9 @@ const items = [
         url: "contact"
     },
     {
-        title: "/about",
-        url: "about",
-        cName: 'nav-links'
+        title: "/blog",
+        url: "blog",
     },
-
-    //{
-        //title: "/home",
-        //url: "#",
-        //cName: 'nav-links'
-    //}
 
 ]
 

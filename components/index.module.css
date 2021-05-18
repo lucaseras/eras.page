@@ -1,0 +1,66 @@
+.h1 {
+    text-align: center;
+    font-family: 'Hack';
+    margin-bottom: 8px;
+}
+
+.line {
+    color: blue;
+    background-color: blue;
+    width: 20%;
+    margin-block-start: 0;
+    margin-block-end: 2;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap-reverse;
+    justify-content:space-around;
+}
+
+/*Content for about*/
+
+.about {
+    font-family: "Hack";
+    font-size: 12pt;
+    line-height: 1.5rem;
+    flex: 0 0 350px;
+}
+
+.imagediv{
+    flex: none;
+    width: auto;
+    height: auto;
+    z-index: -5;
+    
+    
+}
+.image {
+    flex: 0 0 auto;
+    border-radius: 9999px;
+}
+
+
+/*Content for projects*/
+
+.projects {
+    display: flex;
+    width: 100%;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+
+.project {
+    width: 290px;
+    font-size: 14pt;
+}
+
+.projectTitle {
+    font-family: "Hack";
+}
+
+.projectDescription {
+    font-family: "Hack";
+    font-size: 12pt;
+}
