@@ -14,7 +14,7 @@ const projects = [
         link: "https://github.com/lucaseras/333-creations"
     },
     {
-        title: "Anthropology Senior Thesis",
+        title: "Undergrad Senior Thesis",
         description: "Anthropological study of computer science and artificial intelligence as domains of the social sciences",
     },
     {
