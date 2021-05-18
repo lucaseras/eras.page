@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Date from '../components/date'
 import About from '../components/about'
+import Projects from '../components/projects'
 
 
 export default function Home() {
@@ -13,7 +14,9 @@ export default function Home() {
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.headingMd}>
-            <About></About>
+            <About />
+            <Projects />
+
             </section>
         </Layout>
     )
