@@ -15,5 +15,10 @@
     display: flex;
     justify-content: center;
     margin: 0.5rem auto;
-    gap: 12px;
+    /*gap: 12px 0;*/
+}
+
+/*Because in safari gap doesn't work*/
+.logos > * + * {
+    margin-left: 12px;
 }
