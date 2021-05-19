@@ -7,7 +7,7 @@ const projects = [
         title: "Rhythm-login",
         description: "Experimental login security feature",
         //link: "https://github.com/lucaseras/rhythm-login",
-        link: "projects/rhythm-login"
+        link: "/projects/rhythm-login"
     },
     {
         title: "333-se",
@@ -25,8 +25,8 @@ const projects = [
     },
 ]
 
-const projectsAsJSX = projects.map((project) => (
-    <div className={styles.project}>
+const projectsAsJSX = projects.map((project, index) => (
+    <div className={styles.project} key={index}>
         {project.link 
             ? (<h3 className={styles.projectTitle}>
                     <Link href={project.link}>
