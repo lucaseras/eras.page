@@ -6,11 +6,11 @@ import { useState, useEffect } from 'react'
 const items = [
     {
         title: "/contact",
-        url: "contact"
+        url: "/contact"
     },
     {
         title: "/blog",
-        url: "blog",
+        url: "/blog",
     },
 
 ]
@@ -46,16 +46,16 @@ export default function Navbar() {
                     <a className={styles.a}>eras.page</a>
                 </h1>
             </Link>
-        <ul className={styles.ul}>
-            {items.map((item, index) => {
-                return (
-                    <li key={index} className={styles.li}>
-                        <a className={styles.a} href={item.url}>
-                            {item.title}
-                        </a>
-                    </li>
-                )})}
-        </ul>
+            <ul className={styles.ul}>
+                {items.map((item, index) => {
+                    return (
+                        <li key={index} className={styles.li}>
+                            <a className={styles.a} href={item.url}>
+                                {item.title}
+                            </a>
+                        </li>
+                    )})}
+            </ul>
         </nav>
     )
 }
