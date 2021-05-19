@@ -27,11 +27,11 @@ const projects = [
 const projectsAsJSX = projects.map((project) => (
     <div className={styles.project}>
         {project.link 
-            ? (<Link href={project.link}>
-                <h3 className={styles.projectTitle}>
-                    <a>{project.title}</a>
-                </h3>
-            </Link>)
+            ? (<h3 className={styles.projectTitle}>
+                    <Link href={project.link}>
+                        <a>{project.title}</a>
+                    </Link>
+                </h3>)
             : <h3 className={styles.projectTitle}>{project.title}</h3>}
         <p className={styles.projectDescription}>{project.description}</p>
     </div>
