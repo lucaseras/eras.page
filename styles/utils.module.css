@@ -47,6 +47,10 @@
   margin: 0 0 1.25rem;
 }
 
+.author {
+    margin: 0;
+    color: #333333;
+}
 .lightText {
   margin: 0;
   color: #666;
