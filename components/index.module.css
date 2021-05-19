@@ -7,8 +7,7 @@
 }
 
 .line {
-    color: blue;
-    background-color: blue;
+    border: 1px solid red;
     width: 20%;
     margin-bottom: 1rem;
 }
