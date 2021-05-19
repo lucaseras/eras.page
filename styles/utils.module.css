@@ -56,3 +56,19 @@
   color: #666;
 }
 
+.github {
+    display: inline;
+    margin-left: 15px;
+    text-align: center;
+    font-size: 12pt;
+
+}
+
+.projectTitle {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin: 0.5rem 0;
+}
