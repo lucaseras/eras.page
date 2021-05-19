@@ -6,7 +6,8 @@ import Link from 'next/link'
 
 export const siteTitle = 'eras.page'
 
-export default function Layout({ children, home }) {
+
+export default function Layout({ children, home, post}) {
     return (
         <div className={styles.mainContainer}>
         <Head>
@@ -14,12 +15,19 @@ export default function Layout({ children, home }) {
         </Head>
         <Navbar></Navbar>
         <div className={styles.container}>
-            {!home && (
+            {(!home && !post) && (
                 <div className={styles.backToHome}>
                     <Link href="/">
                         <a>← Back to home</a>
                     </Link>
                 </div>
+                )}
+                {post && (
+                    <div className={styles.backToHome}>
+                        <Link href='/blog'>
+                            <a>← Back to blog</a>
+                        </Link>
+                    </div>
             )}
                 <main>{children}</main>
             </div>
