@@ -6,7 +6,8 @@ const projects = [
     {
         title: "Rhythm-login",
         description: "Experimental login security feature",
-        link: "https://github.com/lucaseras/rhythm-login"
+        //link: "https://github.com/lucaseras/rhythm-login",
+        link: "projects/rhythm-login"
     },
     {
         title: "333-se",
