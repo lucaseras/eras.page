@@ -5,7 +5,7 @@ import Date from '../../components/date'
 import Head from 'next/head'
 
 export async function getStaticProps({params}) {
-    const postData = await getPostData(params.id)
+    const postData = await getPostData(params.id, 'posts')
     return {
         props: {
             postData
@@ -14,7 +14,7 @@ export async function getStaticProps({params}) {
 }
 
 export async function getStaticPaths() {
-    const paths = getAllPostIds()
+    const paths = getAllPostIds('posts')
     return {
         paths,
         fallback: false

@@ -1,12 +1,18 @@
 import Head from 'next/head'
 import Layout, {siteTitle} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
+import { getFilesData } from '../lib/getMDData'
 import Link from 'next/link'
 import Date from '../components/date'
 
 export async function getStaticProps() {
-    const allPostsData = getSortedPostsData()
+    const allPostsData = getFilesData('posts').sort((a, b) => {
+        if (a.date < b.date) {
+            return 1
+        } else {
+            return -1
+        }
+    })
     return {
         props: {
             allPostsData
