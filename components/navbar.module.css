@@ -1,4 +1,9 @@
 .navbar {
+    background: linear-gradient(
+    to bottom,
+    white 85%,
+    rgba(255, 255, 255, 0)
+    );
     position: -webkit-sticky;
     z-index: 1;
     position: sticky;
