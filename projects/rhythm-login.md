@@ -2,8 +2,9 @@
 title: 'Rhythm-login'
 author: 'Lucas Eras Paiva'
 link: 'https://github.com/lucaseras/rhythm-login'
-date: '2020-05-01'
+date: '01-05-2020'
 ---
+<!--attention: date in BR format (dd-mm-yyyy)-->
 
 This project was created for the class COMP360: Information Security and
 Privacy. [Zach Mines](https://www.linkedin.com/in/zachary-mines-648044154/) and
