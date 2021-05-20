@@ -14,5 +14,14 @@
 }
 
 .back {
-    margin-top: 15px;
+    margin-top: 20px;
+}
+
+.back > a {
+    text-decoration: none;
+    color: #0070f3;
+}
+
+.back > a:hover {
+    text-decoration: underline;
 }

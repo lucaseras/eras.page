@@ -66,6 +66,7 @@
 
 .projectTitle {
     display: inline-block;
+    font-family:'Hack';
     font-size: 2rem;
     line-height: 1.3;
     font-weight: 800;
