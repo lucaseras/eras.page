@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { useRouter } from 'next/router'
 import styles from './index.module.css'
 
 const projects = [
@@ -26,20 +26,19 @@ const projects = [
     },
 ]
 
-const projectsAsJSX = projects.map((project, index) => (
-    <div className={styles.project} key={index}>
-        {project.link 
-            ? (<h3 className={styles.projectTitle}>
-                    <Link href={project.link}>
-                        <a>{project.title}</a>
-                    </Link>
-                </h3>)
-            : <h3 className={styles.projectTitle}>{project.title}</h3>}
-        <p className={styles.projectDescription}>{project.description}</p>
-    </div>
-))
 
 export default function Projects() {
+    const router = useRouter()
+    const projectsAsJSX = projects.map((project, index) => (
+        <div className={styles.project} key={index}>
+            {project.link
+                ? (<h3 className={styles.projectTitle}>
+                    <a onClick={() => router.push(project.link)}>{project.title}</a>
+                </h3>)
+                : <h3 className={styles.projectTitle}>{project.title}</h3>}
+            <p className={styles.projectDescription}>{project.description}</p>
+        </div>
+))
     return (
         <div>
             <h1 className={styles.h1}>Projects</h1>

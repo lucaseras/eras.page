@@ -3,11 +3,13 @@ import styles from './layout.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export const siteTitle = 'eras.page'
 
 
-export default function Layout({ children, home, post}) {
+export default function Layout({children, home, post}) {
+    const router = useRouter()
     return (
         <div className={styles.mainContainer}>
             <Head>
@@ -17,16 +19,12 @@ export default function Layout({ children, home, post}) {
             <div className={styles.container}>
                 {(!home && !post) && (
                     <div className={styles.back}>
-                        <Link href="/">
-                            <a>← Back to home</a>
-                        </Link>
+                        <a onClick={() => router.back()}>← Back to home</a>
                     </div>
                 )}
                 {post && (
                     <div className={styles.back}>
-                        <Link href='/blog'>
-                            <a>← Back to blog</a>
-                        </Link>
+                        <a onClick={() => router.back()}>← Back to blog</a>
                     </div>
                 )}
                 <main>{children}</main>
