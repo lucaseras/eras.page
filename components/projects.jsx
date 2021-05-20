@@ -12,7 +12,8 @@ const projects = [
     {
         title: "333-se",
         description: "Software engineering course taught at Wesleyan University",
-        link: "https://github.com/lucaseras/333-creations"
+        //link: "https://github.com/lucaseras/333-creations"
+        link: "/projects/333-se"
     },
     {
         title: "Undergrad Senior Thesis",
