@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './index.module.css'
 
 const aboutText = (
-    "Hello there! My name is Lucas Eras. I'm a programmer and an anthropologist interested in doing good change in this world. I value empathy, sincerity and diversity."
+    "Hello there! My name is Lucas Eras Paiva. I'm a programmer and an anthropologist interested in doing good change in this world. I value empathy, sincerity, and diversity."
 )
 
 

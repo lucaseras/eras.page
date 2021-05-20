@@ -1,5 +1,6 @@
 .navbar {
     position: -webkit-sticky;
+    z-index: 1;
     position: sticky;
     top: 0;
     width: 100%;
@@ -55,6 +56,3 @@
 }
 
 
-.a:hover {
-    color: #0070f3;
-}
