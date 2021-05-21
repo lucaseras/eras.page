@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import { useState, useEffect } from 'react'
 // React component that defines the navigation bar
 
 const items = [
