@@ -3,12 +3,15 @@ import {getAllPostIds, getPostData} from '../../lib/getMDData'
 import utilStyles from '../../styles/utils.module.css'
 import Date from '../../components/date'
 import Head from 'next/head'
+import ReactMarkdown from 'react-markdown'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import theme from 'react-syntax-highlighter/dist/cjs/styles/prism/xonokai'
 
 export async function getStaticProps({params}) {
-    const postData = await getPostData(params.id, 'projects')
+    const post = await getPostData(params.id, 'projects')
     return {
         props: {
-            postData
+            post
         }
     }
 }
@@ -21,21 +24,37 @@ export async function getStaticPaths() {
     }
 }
 
-export default function Project({postData}) {
+export default function Project({post}) {
+    // got component setting from https://github.com/remarkjs/react-markdown
+    const components = {
+        code({node, inline, className, children, ...props}) {
+            const match = /language-(\w+)/.exec(className || '')
+            return !inline && match ? (
+                <SyntaxHighlighter 
+                    style={theme} 
+                    language={match[1]}
+                    PreTag="div" 
+                    children={String(children).replace(/\n$/, '')}
+                    {...props} />
+            ) : (
+                <code className={className} {...props} />
+            )
+        }
+    }
     return (
         <Layout>
             <Head>
-                <title>{postData.title}</title>
+                <title>{post.title}</title>
             </Head>
             <article>
-                <h1 className={utilStyles.projectTitle}>{postData.title}</h1>
+                <h1 className={utilStyles.projectTitle}>{post.title}</h1>
                 <h4 className={utilStyles.github}>
-                <a href={postData.link}>GitHub</a></h4>
-                <h4 className={utilStyles.author}>{postData.author} </h4>
-            <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
-            </div>
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                    <a href={post.link}>GitHub</a></h4>
+                <h4 className={utilStyles.author}>{post.author} </h4>
+                <div className={utilStyles.lightText}>
+                    <Date dateString={post.date} />
+                </div>
+                <ReactMarkdown components={components} children={post.content}></ReactMarkdown>
             </article>
         </Layout>)
 }
