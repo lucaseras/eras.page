@@ -1,9 +1,4 @@
 .navbar {
-    background: linear-gradient(
-    to bottom,
-    white 85%,
-    rgba(255, 255, 255, 0)
-    );
     position: -webkit-sticky;
     z-index: 1;
     position: sticky;
@@ -21,7 +16,6 @@
     display: block;
     float: left;
     font-size: 1.2rem;
-    color: black;
     white-space: nowrap;
 
 }
@@ -39,14 +33,17 @@
 }
 
 .a {
-  transition: background-color 0.3s, color 0.3s;
-  display: inline;
-  color: black;
-  font-family: 'Hack', 'fira code', helvetica;
-  text-align: center;
-  margin: 0 1.5rem;
-  text-decoration: none;
-  cursor: pointer;
+    display: inline;
+    font-family: 'Hack', 'fira code', helvetica;
+    text-align: center;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.a:hover {
+    transition: color 0.3 linear;
+    color: steelblue;
 }
 
 @media screen and (max-width: 500px) {

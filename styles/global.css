@@ -11,8 +11,6 @@
 
 html,
 body {
-    background-color: var(--theme-page-background);
-    color: var(--theme-page-text);
     height: 100%;
     position: relative;
     padding: 0;
@@ -41,14 +39,19 @@ html {
 
 a {
   text-decoration: underline;
-  transition: color 0.3s;
+  color: inherit;
   cursor: pointer;
 }
-
 a:hover {
+  transition: color 0.3s;
     text-decoration: underline;
     color: steelblue;
 }
+
+a:visited {
+    color: inherit;
+}
+
 
 img {
   max-width: 100%;
