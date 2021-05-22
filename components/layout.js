@@ -1,31 +1,29 @@
-import {useContext} from 'react'
 import Head from 'next/head'
 import styles from './layout.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import { ThemeContext } from '../styles/theme'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
+import {useTheme} from '../styles/theme'
 
 export const siteTitle = 'eras.page'
 
 
 export default function Layout({children, home, post}) {
-    const {dark, theme, toggleTheme} = useContext(ThemeContext)
+    const [,themeStyle,]= useTheme()
     const router = useRouter()
 
     return (
         <div
             style={{
-                backgroundColor: theme.background,
-                color: theme.foreground
+                backgroundColor: themeStyle.background,
+                color: themeStyle.foreground
             }}
             className={styles.mainContainer}>
             <Head>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
             </Head>
             <Navbar/>
-            <button onClick={toggleTheme}>toggle to {!dark ? 'Dark' : 'Light'}</button>
-            <p>{theme.background}</p>
+            <p>{themeStyle.background}</p>
             <div className={styles.container}>
                 {(!home && !post) && (
                     <div className={styles.back}>

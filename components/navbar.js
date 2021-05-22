@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import { ThemeContext } from '../styles/theme'
-import {useContext} from 'react'
+import { useTheme } from '../styles/theme'
+import ThemeSwitch from './themeSwitcher'
 // React component that defines the navigation bar
 
 
@@ -17,14 +17,10 @@ export default function Navbar() {
         },
 
     ]
-    const {theme, toggleTheme} = useContext(ThemeContext)
-    const style = {
-        background: theme.background,
-        color: theme.foreground,
-    }
+    const [,themeStyle,] = useTheme()
     return (
         <nav
-            style={style}
+            style={themeStyle}
             className={styles.navbar}>
             <Link href='/'>
                 <h1 className={styles.h1}>
@@ -39,7 +35,9 @@ export default function Navbar() {
                                 {item.title}
                             </a>
                         </li>
-                    )})}
+                    )
+                })}
+                <ThemeSwitch/>
             </ul>
         </nav>
     )

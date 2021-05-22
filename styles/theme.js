@@ -1,6 +1,4 @@
-import {useState, useEffect, createContext} from 'react';
-
-const DARK_MODE_KEY = 'dark_mode';
+import {useState, useEffect, createContext, useContext} from 'react';
 
 const themes = {
   light: {
@@ -10,7 +8,7 @@ const themes = {
   dark: {
     foreground: '#ffffff',
     background: '#222222',
-  },
+    },
 };
 
 export const ThemeContext = createContext({
@@ -18,6 +16,13 @@ export const ThemeContext = createContext({
     theme: themes.light,
     toggleTheme: () => {}
 })
+
+export function useTheme() {
+    const { themeStyle, toggleTheme, isDark } = useContext(ThemeContext)
+    return [ isDark, themeStyle, toggleTheme ]
+}
+
+
 
 export function ThemeProvider({children}) {
     const [dark, setDark] = useState(false)
@@ -32,10 +37,12 @@ export function ThemeProvider({children}) {
         localStorage.setItem('dark', JSON.stringify(oppositeTheme))
         setDark(oppositeTheme)
     }
-    const theme = dark ? themes.dark : themes.light
+    const themeStyle = dark ? themes.dark : themes.light
+
+    const isDark = dark
 
     return (
-        <ThemeContext.Provider value={{theme, dark, toggleTheme}}>
+        <ThemeContext.Provider value={{themeStyle, isDark, toggleTheme}}>
             {children}
         </ThemeContext.Provider>
     )
