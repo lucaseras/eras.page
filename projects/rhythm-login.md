@@ -4,7 +4,6 @@ author: 'Lucas Eras Paiva'
 link: 'https://github.com/lucaseras/rhythm-login'
 date: '01-05-2020'
 ---
-<!--attention: date in BR format (dd-mm-yyyy)-->
 
 This project was created for the class COMP360: Information Security and
 Privacy. [Zach Mines](https://www.linkedin.com/in/zachary-mines-648044154/) and
@@ -13,7 +12,7 @@ a password. We wanted to check if the rhythm in which we press the keys when
 inputting our password was consistent enough to be used as part of the
 validation process.
 
-The main file of the project is called `main.py`. Here is an example of how it
+The main file of the project is called main.py. Here is an example of how it
 works in practice:
 
 ![Creating an account](/projects/rhythm-login/creatingAccount.png)
