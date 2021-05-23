@@ -1,0 +1,60 @@
+.subtitle {
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.line {
+    border: 1px solid peru;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+
+/*Content for about*/
+
+.about {
+    font-family: "Hack";
+    font-size: 12pt;
+    line-height: 1.5rem;
+    flex: 0 1 360px;
+}
+
+.imagediv{
+    flex: none;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+    
+}
+.image {
+    flex: 0 0 auto;
+    border-radius: 9999px;
+}
+
+
+/*Content for projects*/
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    flex-wrap:wrap;
+    column-gap: 20px;
+    justify-content:center;
+}
+
+.project {
+    width: 330px;
+    font-size: 14pt;
+}
+
+.projectTitle {
+    font-family: "Hack";
+}
+
+.projectDescription {
+    font-family: "Hack";
+    font-size: 12pt;
+}

@@ -8,7 +8,7 @@ import {useTheme} from '../styles/theme'
 export const siteTitle = 'eras.page'
 
 
-export default function Layout({children, home, post}) {
+export default function Layout({children, home}) {
     const [,themeStyle,]= useTheme()
     const router = useRouter()
 
@@ -21,14 +21,9 @@ export default function Layout({children, home, post}) {
             </Head>
             <Navbar/>
             <div className={styles.container}>
-                {(!home && !post) && (
+                {(!home) && (
                     <div className={styles.back}>
                         <a onClick={() => router.back()}>← Back to home</a>
-                    </div>
-                )}
-                {post && (
-                    <div className={styles.back}>
-                        <a onClick={() => router.back()}>← Back to blog</a>
                     </div>
                 )}
                 <main>{children}</main>

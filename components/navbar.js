@@ -7,10 +7,10 @@ import ThemeSwitch from './themeSwitcher'
 
 export default function Navbar() {
     const items = [
-        {
-            title: "/contact",
-            url: "/contact"
-        },
+        //{
+            //title: "/contact",
+            //url: "/contact"
+        //},
         //{
             //title: "/blog",
             //url: "/blog",
