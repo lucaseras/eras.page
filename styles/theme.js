@@ -25,22 +25,27 @@ export function useTheme() {
 
 
 export function ThemeProvider({children}) {
-    const [dark, setDark] = useState(false)
+    const [dark, setDark] = useState(true)
 
     useEffect(() => {
-        let isDark;
         const local = window.localStorage.getItem('dark')
-        if (local == null) {
-            isDark = true
-        } else {
-            isDark = local === 'true'
+        const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleSystemChange = (event) => {
+            setDark(event.matches)
+            localStorage.setItem('dark', event.matches)
         }
-        setDark(isDark)
+        systemPreference.addEventListener('change', handleSystemChange)
+        if (local == null) {
+            setDark(systemPreference.matches)
+            localStorage.setItem('dark', systemPreference.matches)
+        }
+    
+        return () => systemPreference.removeEventListener('change', handleSystemChange);
     }, [dark])
 
     const toggleTheme = () => {
         const oppositeTheme = !dark
-        localStorage.setItem('dark', JSON.stringify(oppositeTheme))
+        localStorage.setItem('dark', `${oppositeTheme}`)
         setDark(oppositeTheme)
     }
     const themeStyle = dark ? themes.dark : themes.light
