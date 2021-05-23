@@ -27,6 +27,7 @@ export default function Navbar() {
                     <a className={styles.a}>eras.page</a>
                 </h1>
             </Link>
+            <div className={styles.rightSide}>
             <ul className={styles.ul}>
                 {items.map((item, index) => {
                     return (
@@ -37,8 +38,11 @@ export default function Navbar() {
                         </li>
                     )
                 })}
-                <ThemeSwitch/>
-            </ul>
+                </ul>
+                <div className={styles.switchDiv}>
+                <ThemeSwitch />
+                </div>
+            </div>
         </nav>
     )
 }

@@ -14,16 +14,12 @@ export default function Layout({children, home, post}) {
 
     return (
         <div
-            style={{
-                backgroundColor: themeStyle.background,
-                color: themeStyle.foreground
-            }}
+            style={themeStyle}
             className={styles.mainContainer}>
             <Head>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
             </Head>
             <Navbar/>
-            <p>{themeStyle.background}</p>
             <div className={styles.container}>
                 {(!home && !post) && (
                     <div className={styles.back}>
