@@ -1,11 +1,12 @@
 import Layout from '../../components/layout'
 import {getAllPostIds, getPostData} from '../../lib/getMDData'
-import utilStyles from '../../styles/utils.module.css'
+import styles from '../../styles/projects.module.css'
 import Date from '../../components/date'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import theme from 'react-syntax-highlighter/dist/cjs/styles/prism/xonokai'
+import { useTheme } from '../../styles/theme'
 
 export async function getStaticProps({params}) {
     const post = await getPostData(params.id, 'projects')
@@ -41,17 +42,19 @@ export default function Project({post}) {
             )
         }
     }
+    const [isDark, , ] = useTheme()
+    const dateStyle = isDark ? styles.dateDark : styles.dateLight
     return (
         <Layout>
             <Head>
                 <title>{post.title}</title>
             </Head>
             <article>
-                <h1 className={utilStyles.projectTitle}>{post.title}</h1>
-                <h4 className={utilStyles.github}>
+                <h1 className={styles.projectTitle}>{post.title}</h1>
+                <h4 className={styles.github}>
                     <a href={post.link}>GitHub</a></h4>
-                <h4 className={utilStyles.author}>{post.author} </h4>
-                <div className={utilStyles.lightText}>
+                <h4 className={styles.author}>{post.author} </h4>
+                <div className={dateStyle}>
                     <Date dateString={post.date} />
                 </div>
                 <ReactMarkdown components={components} children={post.content}></ReactMarkdown>
