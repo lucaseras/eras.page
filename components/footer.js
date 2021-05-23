@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './footer.module.css'
 import useWindowDimensions from './useWindowDimensions'
+import { useTheme } from '../styles/theme'
 
 const githubLogo = (
     <Link
@@ -42,14 +43,15 @@ const madeByText = (width) => {
 }
 
 export default function bottom() {
+    const [isDark, , ] = useTheme()
     const {width} = useWindowDimensions();
 
     return (
             <div className={styles.main}>
                 <p className={styles.text}>
-                    {madeByText(width)}
-                </p>
-                    <div className={styles.logos}>
+                {madeByText(width)}
+            </p>
+                <div className={`${styles.logos} ${isDark ? styles.inverted : ''}`}>
                     {githubLogo}
                     {linkedinLogo}
                 </div>

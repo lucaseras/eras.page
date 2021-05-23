@@ -22,3 +22,8 @@
 .logos > * + * {
     margin-left: 12px;
 }
+
+.inverted {
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+}
