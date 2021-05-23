@@ -11,10 +11,10 @@ export default function Navbar() {
             title: "/contact",
             url: "/contact"
         },
-        {
-            title: "/blog",
-            url: "/blog",
-        },
+        //{
+            //title: "/blog",
+            //url: "/blog",
+        //},
 
     ]
     const [,themeStyle,] = useTheme()
