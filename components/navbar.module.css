@@ -23,6 +23,7 @@
 
 .rightSide {
     display: flex;
+    overflow: visible;
     align-items: center;
     
 }
@@ -37,7 +38,6 @@
 
 
 .li {
-    overflow: hidden;
     white-space: nowrap;
     display: inline;
 }
@@ -69,22 +69,28 @@
 
 .switchDiv {
     display: inline;
-    margin-top: auto;
     vertical-align: center;
+    justify-content: center;
+    flex: 0;
+    max-width:35px;
+    max-height:35px;
+    overflow: visible;
 }
 
 .themeSwitch {
-    position: absolute;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     height: 35px;
     width: 35px;
     border: none;
+    margin-left: 20px;
     border-radius: 100%;
+    transform-origin: 50% 50%;
+    transition: all 0.3s;
 }
 
 .themeSwitch:hover {
-    height: 40px;
-    width: 40px;
+    transform: scale(1.1);
+    cursor: pointer;
 }
