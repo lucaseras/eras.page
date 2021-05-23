@@ -25,19 +25,25 @@ export function useTheme() {
 
 
 export function ThemeProvider({children}) {
-    const [dark, setDark] = useState(true)
+
+    const [dark, setDark] = useState(false)
 
     useEffect(() => {
         const local = window.localStorage.getItem('dark')
         const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+
         const handleSystemChange = (event) => {
             setDark(event.matches)
             localStorage.setItem('dark', event.matches)
+            console.log("change in system happened!")
         }
         systemPreference.addEventListener('change', handleSystemChange)
+        console.log(local)
         if (local == null) {
             setDark(systemPreference.matches)
             localStorage.setItem('dark', systemPreference.matches)
+        } else {
+            setDark(JSON.parse(local))
         }
     
         return () => systemPreference.removeEventListener('change', handleSystemChange);
