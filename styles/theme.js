@@ -28,7 +28,13 @@ export function ThemeProvider({children}) {
     const [dark, setDark] = useState(false)
 
     useEffect(() => {
-        const isDark = window.localStorage.getItem('dark') === 'true';
+        let isDark;
+        const local = window.localStorage.getItem('dark')
+        if (local == null) {
+            isDark = true
+        } else {
+            isDark = local === 'true'
+        }
         setDark(isDark)
     }, [dark])
 

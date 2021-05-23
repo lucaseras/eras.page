@@ -1,25 +1,15 @@
-.light {
-    --theme-color: white;
-    --theme-page-background: white;
-    --theme-page-text: black;
-}
-.dark {
-    --theme-color: black;
-    --theme-page-background: black;
-    --theme-page-text: white;
-}
-
 html,
 body {
     height: 100%;
-    position: relative;
     padding: 0;
     margin: 0;
     font-family: Fira Sans,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 1.6;
     font-size: 18px;
-    padding-bottom:60px;
+    padding-bottom: 60px;
+    color: '#ffffff';
+    background-color: '#222222';
 }
 
 html {
