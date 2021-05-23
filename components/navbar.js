@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './navbar.module.css'
+import styles from '../styles/navbar.module.css'
 import { useTheme } from '../styles/theme'
 import ThemeSwitch from './themeSwitcher'
 // React component that defines the navigation bar
@@ -32,9 +32,11 @@ export default function Navbar() {
                 {items.map((item, index) => {
                     return (
                         <li key={index} className={styles.li}>
-                            <a className={styles.a} href={item.url}>
-                                {item.title}
-                            </a>
+                            <Link href={item.url}>
+                                <a className={styles.a} >
+                                    {item.title}
+                                </a>
+                            </Link>
                         </li>
                     )
                 })}

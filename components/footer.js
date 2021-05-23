@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './footer.module.css'
+import styles from '../styles/footer.module.css'
 import useWindowDimensions from './useWindowDimensions'
 import { useTheme } from '../styles/theme'
 

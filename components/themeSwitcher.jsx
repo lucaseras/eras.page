@@ -1,4 +1,4 @@
-import styles from './navbar.module.css'
+import styles from '../styles/navbar.module.css'
 import {useTheme} from '../styles/theme'
 import {Moon, Sun} from 'react-feather'
 // React component that creates the theme switcher button

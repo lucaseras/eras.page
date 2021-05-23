@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import styles from './index.module.css'
+import styles from '../styles/index.module.css'
 
 const projects = [
     {
