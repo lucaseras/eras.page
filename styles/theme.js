@@ -4,14 +4,14 @@ const themes = {
   light: {
       color: '#000000',
       background: '#eeeeee',
-      transition: 'font-color 0.3s ease;',
-      transition: 'background-color 0.3s ease;'
+      transition: 'font-color 0.3s ease',
+      transition: 'background-color 0.3s ease'
   },
   dark: {
       color: '#ffffff',
       background: '#222222',
-      transition: 'font-color 0.3s ease;',
-      transition: 'background-color 0.3s ease;'
+      transition: 'font-color 0.3s ease',
+      transition: 'background-color 0.3s ease'
     },
 };
 

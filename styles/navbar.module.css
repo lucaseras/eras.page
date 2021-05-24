@@ -10,12 +10,10 @@
     align-items: center;
     font-size: 1.2rem;
     padding: 0 5% 0 5%;
-    text-align: center;
 }
 
 .h1 {
     display: block;
-    float: left;
     font-size: 1.2rem;
     white-space: nowrap;
 
@@ -73,6 +71,7 @@
     justify-content: center;
     flex: 0;
     margin-left: 20px;
+    margin-right: 20px;
     max-width:35px;
     max-height:35px;
     overflow: visible;
