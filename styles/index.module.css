@@ -64,8 +64,15 @@
     font-size: 14pt;
 }
 
-.projectTitle {
+.projectTitleDark {
     font-family: "Hack";
+}
+
+.projectTitleWhite {
+    font-family: "Hack";
+}
+.projectTitleWhite > a:hover {
+    color: peru;
 }
 
 .projectDescription {

@@ -30,13 +30,14 @@ const projects = [
 export default function Projects() {
     const [isDark,,] = useTheme()
     const router = useRouter()
+    const projectTitle = isDark ? styles.projectTitleDark : styles.projectTitleWhite
     const projectsAsJSX = projects.map((project, index) => (
         <div className={styles.project} key={index}>
             {project.link
-                ? (<h3 className={styles.projectTitle}>
+                ? (<h3 className={projectTitle}>
                     <a onClick={() => router.push(project.link)}>{project.title}</a>
                 </h3>)
-                : <h3 className={styles.projectTitle}>{project.title}</h3>}
+                : <h3 className={projectTitle}>{project.title}</h3>}
             <p className={styles.projectDescription}>{project.description}</p>
         </div>
 ))
