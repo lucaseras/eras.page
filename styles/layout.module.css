@@ -13,15 +13,24 @@
     min-height: 100vh;
 }
 
-.back {
+.backWhite {
     margin-top: 20px;
 }
 
-.back > a {
+.backWhite > a {
     text-decoration: none;
     color: #0070f3;
 }
 
-.back > a:hover {
+.backDark {
+    margin-top: 20px;
+}
+
+.backDark > a {
+    text-decoration: none;
+    color: skyblue;
+}
+.backDark > a:hover,
+.backWhite > a:hover {
     text-decoration: underline;
 }

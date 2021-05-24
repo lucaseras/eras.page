@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { useTheme } from '../styles/theme'
 import Image from 'next/image'
 import styles from '../styles/index.module.css'
 
@@ -12,10 +12,11 @@ const aboutText = (
 
 
 export default function About() {
+    const [isDark,,] = useTheme()
     return (
         <div>
             <h1 className={styles.h1}>About me</h1>
-            <hr className={styles.line} />
+            <hr className={isDark ? styles.lineDark : styles.lineWhite} />
             <div className={styles.content}>
                 <p className={styles.about}>
                     {aboutText}

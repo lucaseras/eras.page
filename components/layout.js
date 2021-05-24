@@ -9,7 +9,7 @@ export const siteTitle = 'eras.page'
 
 
 export default function Layout({children, home}) {
-    const [,themeStyle,]= useTheme()
+    const [isDark,themeStyle,]= useTheme()
     const router = useRouter()
 
     return (
@@ -22,7 +22,7 @@ export default function Layout({children, home}) {
             <Navbar/>
             <div className={styles.container}>
                 {(!home) && (
-                    <div className={styles.back}>
+                    <div className={isDark ? styles.backDark : styles.backWhite}>
                         <a onClick={() => router.back()}>← Back to home</a>
                     </div>
                 )}

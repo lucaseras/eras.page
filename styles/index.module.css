@@ -6,8 +6,13 @@
     margin-bottom: 8px;
 }
 
-.line {
+.lineWhite {
     border: 1px solid peru;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+.lineDark {
+    border: 1px solid skyblue;
     width: 200px;
     margin-bottom: 1rem;
 }

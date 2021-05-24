@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { useTheme } from '../styles/theme'
 import { useRouter } from 'next/router'
 import styles from '../styles/index.module.css'
 
@@ -28,6 +28,7 @@ const projects = [
 
 
 export default function Projects() {
+    const [isDark,,] = useTheme()
     const router = useRouter()
     const projectsAsJSX = projects.map((project, index) => (
         <div className={styles.project} key={index}>
@@ -42,7 +43,7 @@ export default function Projects() {
     return (
         <div>
             <h1 className={styles.h1}>Projects</h1>
-            <hr className={styles.line} />
+            <hr className={isDark ? styles.lineDark : styles.lineWhite} />
             <div className={styles.projects}>
                 {projectsAsJSX}
             </div>

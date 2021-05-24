@@ -28,13 +28,14 @@ html {
 }
 
 a {
-  text-decoration: underline;
-  color: inherit;
-  cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
+
 a:hover {
-    transition: color 0.3s;
-    color: steelblue;
+    color: skyblue;
 }
 
 
