@@ -3,6 +3,7 @@ import {getAllPostIds, getPostData} from '../../lib/getMDData'
 import styles from '../../styles/projects.module.css'
 import Date from '../../components/date'
 import Head from 'next/head'
+import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import theme from 'react-syntax-highlighter/dist/cjs/styles/prism/xonokai'
@@ -25,7 +26,9 @@ export async function getStaticPaths() {
     }
 }
 
+
 export default function Project({post}) {
+    const linkNext = ({children, href}) => <Link href={href}><a>{children}</a></Link>
     // got component setting from https://github.com/remarkjs/react-markdown
     const components = {
         code({node, inline, className, children, ...props}) {
@@ -39,8 +42,9 @@ export default function Project({post}) {
                     {...props} />
             ) : (
                 <code className={className} {...props} />
-            )
-        }
+                )
+        },
+        a: linkNext
     }
     const [isDark, , ] = useTheme()
     const dateStyle = isDark ? styles.dateDark : styles.dateLight
@@ -61,3 +65,4 @@ export default function Project({post}) {
             </article>
         </Layout>)
 }
+
