@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
 
 export default function Project({post}) {
-    const linkNext = ({children, href}) => <Link href={href}><a>{children}</a></Link>
+    const linkNext = ({children, href}) => <Link href={href} replace><a>{children}</a></Link>
     // got component setting from https://github.com/remarkjs/react-markdown
     const components = {
         code({node, inline, className, children, ...props}) {
