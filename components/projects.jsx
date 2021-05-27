@@ -20,7 +20,7 @@ const projects = [
         description: "Anthropological study of computer science and artificial intelligence as domains of the social sciences",
     },
     {
-        title: "Eras.page",
+        title: "eras.page",
         description: "Handmade personal website, created from scratch using React.js and Next.js",
         //link: "https://github.com/lucaseras/blog"
         link: "/projects/eras-page"
