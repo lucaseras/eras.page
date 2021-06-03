@@ -20,7 +20,7 @@ export default function Navbar() {
     const [,themeStyle,] = useTheme()
     return (
         <nav
-            style={themeStyle}
+            style={{ background: themeStyle.background }}
             className={styles.navbar}>
             <Link href='/'>
                 <h1 className={styles.h1}>

@@ -9,12 +9,11 @@ export const siteTitle = 'eras.page'
 
 
 export default function Layout({children, home}) {
-    const [isDark,themeStyle,]= useTheme()
+    const [isDark, themeStyle,]= useTheme()
     const router = useRouter()
 
     return (
         <div
-            style={themeStyle}
             className={styles.mainContainer}>
             <Head>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
@@ -29,6 +28,13 @@ export default function Layout({children, home}) {
                 <main>{children}</main>
             </div>
             <Footer></Footer>
+            <style jsx global>{`
+                body {
+                background-color: ${themeStyle.background};
+                color: ${themeStyle.color};
+                }
+                `}
+            </style>
         </div>
     )
 } 
