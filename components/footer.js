@@ -15,6 +15,7 @@ export default function bottom() {
         >
             <a>
                 <Image
+                    className={`${isDark ? styles.inverted : ''}`}
                     src='/github.png'
                     alt={'Github account'}
                     width={34}
@@ -33,6 +34,7 @@ export default function bottom() {
         >
             <a>
                 <Image
+                    className={`${isDark ? styles.inverted : ''}`}
                     src='/linkedin.png'
                     alt={'Linkedin account'}
                     width={34}
@@ -51,13 +53,12 @@ export default function bottom() {
             return "Made by Lucas Eras"
         }
     }
-
     return (
         <div className={styles.main}>
             <p className={styles.text}>
                 {madeByText(width)}
             </p>
-            <div className={`${styles.logos} ${isDark ? styles.inverted : ''}`}>
+            <div className={styles.logos}>
                 {githubLogo}
                 {linkedinLogo}
             </div>

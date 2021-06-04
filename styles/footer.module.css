@@ -43,4 +43,5 @@
 .inverted {
     -webkit-filter: invert(100%); /* Safari/Chrome */
     filter: invert(100%);
+    transition: all 0.1s ease;
 }

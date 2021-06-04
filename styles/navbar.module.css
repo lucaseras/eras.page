@@ -49,10 +49,6 @@
     cursor: pointer;
 }
 
-.a:hover {
-    transition: color 0.3 linear;
-    color: steelblue;
-}
 
 @media screen and (max-width: 500px) {
     .navbar {

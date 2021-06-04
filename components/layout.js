@@ -34,6 +34,15 @@ export default function Layout({children, home}) {
                 background-color: ${themeStyle.background};
                 color: ${themeStyle.color};
                 }
+                a {
+                color: ${themeStyle.color}
+                }
+                p {
+                color: ${themeStyle.color}
+                }
+                a:hover{
+                color: ${isDark ? 'skyblue' : 'peru'}
+                }
                 `}
             </style>
         </div>
