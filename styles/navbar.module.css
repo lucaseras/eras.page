@@ -66,30 +66,32 @@
 }
 
 .switchDiv {
-    display: inline;
-    vertical-align: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex: 0;
     margin-left: 20px;
     margin-right: 20px;
-    max-width:35px;
-    max-height:35px;
-    overflow: visible;
+
 }
 
 .themeSwitch {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    position: absolute;
     height: 35px;
     width: 35px;
     border: none;
+    padding: 0;
+    transform-origin: middle center;
     border-radius: 100%;
-    transform-origin: 50% 50%;
     transition: all 0.3s;
 }
 
+.themeSwitch > * {
+    margin: auto;
+}
+
+
 .themeSwitch:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     cursor: pointer;
 }
