@@ -16,11 +16,28 @@
     justify-content: center;
     margin: 0.5rem auto;
     /*gap: 12px 0;*/
+    transition: filter 0.2s ease;
+    font-size: 0.7rem;
+    
 }
 
 /*Because in safari gap doesn't work*/
 .logos > * + * {
-    margin-left: 12px;
+    margin-left: 30px;
+}
+
+.logos > * {
+    display: block;
+    text-align: center;
+}
+
+.logos > * > * {
+    margin-top: 0;
+}
+
+
+.logos > a:hover {
+    filter: invert(30%);
 }
 
 .inverted {
