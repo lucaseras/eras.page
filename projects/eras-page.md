@@ -2,7 +2,7 @@
 title: 'Eras.page'
 author: 'Lucas Eras Paiva'
 link: 'https://github.com/lucaseras/eras.page'
-date: '01-09-2020'
+date: '02-05-2021'
 ---
 
 After working on the creation of [333-se](/projects/333-se), I was excited to
