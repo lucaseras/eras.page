@@ -14,7 +14,7 @@
 .logos {
     display: flex;
     justify-content: center;
-    margin: 0.5rem auto;
+    margin: 0.8rem auto;
     /*gap: 12px 0;*/
     transition: filter 0.2s ease;
     font-size: 0.7rem;

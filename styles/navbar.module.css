@@ -13,10 +13,10 @@
 }
 
 .h1 {
-    display: block;
+    display: flex;
+    align-items: center;
     font-size: 1.2rem;
     white-space: nowrap;
-
 }
 
 .rightSide {

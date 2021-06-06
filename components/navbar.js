@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/navbar.module.css'
-import { useTheme } from '../styles/theme'
+import {useTheme} from '../styles/theme'
+import Image from 'next/image'
 import ThemeSwitch from './themeSwitcher'
 // React component that defines the navigation bar
 
@@ -24,6 +25,13 @@ export default function Navbar() {
             className={styles.navbar}>
             <Link href='/'>
                 <h1 className={styles.h1}>
+                    <Image
+                        src='/icon@3x.png'
+                        alt='Website icon'
+                        width={30}
+                        height={30}
+                    />
+
                     <a className={styles.a}>eras.page</a>
                 </h1>
             </Link>
