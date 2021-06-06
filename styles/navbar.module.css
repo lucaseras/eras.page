@@ -1,8 +1,8 @@
 .navbar {
-    position: -webkit-sticky;
-    z-index: 1;
-    position: sticky;
     top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
     width: 100%;
     height:60px;
     display: inline-flex;

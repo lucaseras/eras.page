@@ -10,9 +10,6 @@ body {
     padding-bottom: 60px;
 }
 
-html {
-    overflow-y: overlay;
-}
 @font-face {
     font-family: 'Hack';
     src: url('/fonts/Hack/hack-regular-webfont.woff2') format('woff2'),
@@ -32,7 +29,6 @@ a {
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
 
 img {
   max-width: 100%;

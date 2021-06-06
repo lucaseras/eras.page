@@ -1,4 +1,3 @@
-import Layout from '../components/layout'
 import styles from '../styles/contact.module.css'
 
 const email = (
@@ -8,8 +7,6 @@ const email = (
 )
 export default function Contact() {
     return (
-        <Layout>
             {email}
-        </Layout>
     )
 }

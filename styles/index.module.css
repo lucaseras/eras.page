@@ -53,9 +53,8 @@
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 330px);
-    flex-wrap:wrap;
-    column-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 340px);
+    column-gap: 50px;
     justify-content:center;
 }
 
@@ -70,9 +69,6 @@
 
 .projectTitleWhite {
     font-family: "Hack";
-}
-.projectTitleWhite > a:hover {
-    color: peru;
 }
 
 .projectDescription {

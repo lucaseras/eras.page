@@ -1,16 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/layout.module.css'
+import {useTheme} from '../styles/theme'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import {useRouter} from 'next/router'
-import {useTheme} from '../styles/theme'
 
 export const siteTitle = 'eras.page'
 
 
-export default function Layout({children, home}) {
+export default function Layout({children}) {
     const [isDark, themeStyle,]= useTheme()
-    const router = useRouter()
 
     return (
         <div
@@ -19,14 +17,11 @@ export default function Layout({children, home}) {
                 <meta name='viewport' content='initial-scale=1.0, width=device-width' />
                 <link rel='icon' type='image/png' href='/favicon.png' />
             </Head>
+            <Navbar />
             <div className={styles.container}>
-                {(!home) && (
-                    <div className={isDark ? styles.backDark : styles.backWhite}>
-                        <a onClick={() => router.back()}>← Back to home</a>
-                    </div>
-                )}
                 <main>{children}</main>
             </div>
+            <Footer />
             <style jsx global>{`
                 body {
                 background-color: ${themeStyle.background};
