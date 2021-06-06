@@ -19,7 +19,6 @@ export default function Layout({children, home}) {
                 <meta name='viewport' content='initial-scale=1.0, width=device-width' />
                 <link rel='icon' type='image/png' href='/favicon.png' />
             </Head>
-            <Navbar/>
             <div className={styles.container}>
                 {(!home) && (
                     <div className={isDark ? styles.backDark : styles.backWhite}>
@@ -28,7 +27,6 @@ export default function Layout({children, home}) {
                 )}
                 <main>{children}</main>
             </div>
-            <Footer></Footer>
             <style jsx global>{`
                 body {
                 background-color: ${themeStyle.background};
