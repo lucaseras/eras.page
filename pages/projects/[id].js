@@ -47,10 +47,9 @@ export default function Project({post}) {
         a: linkNext
     }
     const [isDark, , ] = useTheme()
-    const dateStyle = isDark ? styles.dateDark : styles.dateLight
     const router = useRouter()
     return (
-        <>
+        <div className={styles.main}>
             <Head>
                 <title>{post.title}</title>
             </Head>
@@ -60,13 +59,15 @@ export default function Project({post}) {
             <article>
                 <h1 className={styles.projectTitle}>{post.title}</h1>
                 <h4 className={styles.github}>
-                    <a href={post.link}>GitHub</a></h4>
+                    <a href={post.link}>{post.notGithub ? post.notGithub : 'GitHub'}</a></h4>
+                {/*
                 <h4 className={styles.author}>{post.author} </h4>
-                <div className={dateStyle}>
+                    <div className={dateStyle}>
                     <Date dateString={post.date} />
                 </div>
+                    */}
                 <ReactMarkdown components={components} children={post.content}></ReactMarkdown>
             </article>
-        </>)
+        </div>)
 }
 

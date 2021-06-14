@@ -6,9 +6,10 @@
 
 }
 .container {
-    max-width: 45rem;
+    max-width: 80%;
     min-width: 250px;
     padding: 0 1rem;
     width: 100%;
     flex:1;
 }
+

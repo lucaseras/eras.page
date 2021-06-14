@@ -9,43 +9,12 @@
 .lineWhite {
     border: 1px solid peru;
     width: 200px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 .lineDark {
     border: 1px solid skyblue;
     width: 200px;
-    margin-bottom: 1rem;
-}
-
-.content {
-    display: flex;
-    align-items: center;
-    flex-wrap:wrap-reverse;
-    justify-content:space-evenly;
-}
-
-/*Content for about*/
-
-.about {
-    font-family: "Hack";
-    font-size: 12pt;
-    line-height: 1.5rem;
-    flex: 0 1 360px;
-}
-
-.imagediv{
-    flex: none;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    margin-right: 10px;
-    margin-left: 10px;
-    
-    
-}
-.image {
-    flex: 0 0 auto;
-    border-radius: 9999px;
+    margin-bottom: 1.4rem;
 }
 
 
@@ -53,25 +22,35 @@
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 340px);
-    column-gap: 50px;
+    grid-template-columns: repeat(auto-fill, 330px);
+    column-gap: 40px;
     justify-content:center;
 }
 
+
 .project {
+    position: relative;
     width: 330px;
     font-size: 14pt;
 }
 
-.projectTitleDark {
+.projectTitle{
     font-family: "Hack";
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
-.projectTitleWhite {
-    font-family: "Hack";
-}
 
 .projectDescription {
     font-family: "Hack";
     font-size: 12pt;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.floating::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: peru;
 }

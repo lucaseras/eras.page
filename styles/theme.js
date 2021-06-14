@@ -4,12 +4,14 @@ const themes = {
   light: {
       color: '#000000',
       background: '#eeeeee',
+      navbar: '#e0e0e0',
       transition: 'font-color 0.3s ease',
       transition: 'background-color 0.3s ease'
   },
   dark: {
       color: '#ffffff',
       background: '#222222',
+      navbar: '#1f1f1f',
       transition: 'font-color 0.3s ease',
       transition: 'background-color 0.3s ease'
     },
@@ -39,10 +41,8 @@ export function ThemeProvider({children}) {
         const handleSystemChange = (event) => {
             setDark(event.matches)
             localStorage.setItem('dark', event.matches)
-            console.log("change in system happened!")
         }
         systemPreference.addEventListener('change', handleSystemChange)
-        console.log(local)
         if (local == null) {
             setDark(systemPreference.matches)
             localStorage.setItem('dark', systemPreference.matches)
