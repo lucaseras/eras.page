@@ -1,0 +1,25 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 20px;
+    height: 10vh;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.titleName {
+    font-family: "Hack";
+    font-size: 35pt;
+    margin-left: 20px;
+}
+.titleName > * {
+    text-decoration: none;
+}

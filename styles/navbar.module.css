@@ -8,8 +8,8 @@
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.2rem;
-    padding: 0 5% 0 5%;
+    font-size: 1rem;
+    padding: 0 3% 0 3%;
 }
 
 .h1 {
@@ -72,9 +72,8 @@
 
 .themeSwitch {
     display: flex;
-    position: absolute;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     border: none;
     padding: 0;
     transform-origin: middle center;

@@ -1,11 +1,10 @@
 import { useTheme } from '../styles/theme'
 import Image from 'next/image'
-import styles from '../styles/index.module.css'
+import styles from '../styles/about.module.css'
 
 const aboutText = (
     `Hello there! My name is Lucas Eras Paiva. I'm a programmer and an
-    anthropologist interested in doing good change in this world. I value
-    empathy, sincerity, and diversity.
+    anthropologist interested in using my mixed bag of skills to positively impact the life of others. Below you will find some of my projects and interests. 
     Feel free to reach out at
     lucaseraspaiva@gmail.com`
 )
@@ -14,9 +13,8 @@ const aboutText = (
 export default function About() {
     const [isDark,,] = useTheme()
     return (
-        <div>
-            <h1 className={styles.h1}>About me</h1>
-            <hr className={isDark ? styles.lineDark : styles.lineWhite} />
+        <div className={styles.main}>
+            <div className={styles.floating}/>
             <div className={styles.content}>
                 <p className={styles.about}>
                     {aboutText}
