@@ -51,7 +51,7 @@ export function ThemeProvider({children}) {
         }
     
         return () => systemPreference.removeEventListener('change', handleSystemChange);
-    }, [dark])
+    }, [])
 
     const toggleTheme = () => {
         const oppositeTheme = !dark
