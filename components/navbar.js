@@ -3,10 +3,12 @@ import styles from '../styles/navbar.module.css'
 import {useTheme} from '../styles/theme'
 import Image from 'next/image'
 import ThemeSwitcher from './themeSwitcher'
+import useWindowDimensions from '../components/useWindowDimensions'
 // React component that defines the navigation bar
 
 
 export default function Navbar() {
+    const {width} = useWindowDimensions();
     const items = [
         {
             title: "programming",
@@ -31,8 +33,9 @@ export default function Navbar() {
         const element = document.getElementById(id)
         if (!element) { 
             document.location.href = `/#${id}`;
+        } else {
+            document.getElementById(id).scrollIntoView({behavior: "smooth"});
         }
-        document.getElementById(id).scrollIntoView(true);
     }
 
     return (
@@ -53,6 +56,7 @@ export default function Navbar() {
                 </h1>
             </Link>
             <div className={styles.rightSide}>
+                {(width > 600) ? (
                 <ul className={styles.ul}>
                     {items.map((item, index) => {
                         return (
@@ -64,6 +68,8 @@ export default function Navbar() {
                         )
                     })}
                 </ul>
+                ) 
+                : (<></>) }
                 <ThemeSwitcher />
             </div>
         </nav>
