@@ -16,10 +16,14 @@ export default function Navbar() {
             title: "writing",
             id: 'writing',
         },
-        //{
-            //title: "engineering",
-            //id: 'engineering',
-        //},
+        {
+            title: "engineering",
+            id: 'engineering',
+        },
+        {
+            title: "art",
+            id: 'art',
+        },
 
     ]
     const [, themeStyle,] = useTheme()
