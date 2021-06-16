@@ -1,7 +1,7 @@
 import About from '../components/about'
 import Programming from '../components/programming'
 import Writing from '../components/writing'
-//import Engineering from '../components/engineering'
+import Engineering from '../components/engineering'
 
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
             <About />
             <Programming />
             <Writing />
-            {/*<Engineering />*/}
+            <Engineering />
         </section>
     )
 }

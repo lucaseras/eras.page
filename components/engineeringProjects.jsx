@@ -1,23 +1,23 @@
 const projects = [
     {
-        title: "Landscapes of the Anthropocene",
-        description: "Anthropology and sociology writing for ANTH204: Extreme Landscapes of the Anthropocene",
+        title: "Theremin",
+        description: "Engineering project of a theremin, which we called \"The Ultimate 'Air Guitar'\"",
         //link: "https://github.com/lucaseras/rhythm-login",
-        link: "/projects/landscapes",
-        image: "/projects/landscapes/landscapes.jpg"
+        link: "/projects/theremin",
+        image: "/projects/theremin/theremin.jpg"
     },
     {
-        title: "Anthropology Senior Thesis",
-        description: "Anthropological study of computer science and artifical intelligence as domains of the social sciences",
-        image: "/projects/thesis/thesis.jpg"
+        title: "Weather Station",
+        description: "A small and local weather station (checks temperature and humidity) with online data comparison",
+        link: '/projects/weatherStation',
+        image: "/projects/weatherStation/weatherStation.png"
     },
-    //{
-        //title: "eras.page",
-        //description: "Handmade personal website, created from scratch using React.js and Next.js",
-        ////link: "https://github.com/lucaseras/blog"
-        //link: "/projects/eras-page",
-        //image: "/projects/eras.page/eras.page.png"
-    //},
+    {
+        title: "SolidWorks replications",
+        description: "Worked on the replication of real-life objects into 3D form using SolidWorks",
+        link: '/projects/solidworks',
+        image: "/projects/solidworks/solidworks.png"
+    },
 ]
 
 export default projects;
