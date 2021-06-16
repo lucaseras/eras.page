@@ -35,8 +35,20 @@
     display: flex;
     margin-right: 20px;
     margin-left: 20px;
-    border-radius: 100%;
-    outline: 0.5rem double peru;
+    /*outline: 0.5rem double peru;*/
+}
+.imagediv:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    transform-origin: center;
+    transform: scale(1.1);
+    border: 0.5rem double peru;
 }
 
 .image {
