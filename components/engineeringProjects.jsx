@@ -13,7 +13,7 @@ const projects = [
         image: "/projects/weatherStation/weatherStation.png"
     },
     {
-        title: "SolidWorks replications",
+        title: "SolidWorks recreations",
         description: "Worked on the replication of real-life objects into 3D form using SolidWorks",
         link: '/projects/solidworks',
         image: "/projects/solidworks/solidworks.png"
