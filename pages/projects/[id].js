@@ -58,8 +58,11 @@ export default function Project({post}) {
             </div>
             <article>
                 <h1 className={styles.projectTitle}>{post.title}</h1>
+                {post.link ? (
                 <h4 className={styles.github}>
-                    <a href={post.link}>{post.notGithub ? post.notGithub : 'GitHub'}</a></h4>
+                    <a href={post.link}>{post.notGithub ? post.notGithub : 'GitHub'}</a>
+                </h4>
+                ) : (<></>)}
                 {/*
                 <h4 className={styles.author}>{post.author} </h4>
                     <div className={dateStyle}>
