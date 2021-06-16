@@ -4,4 +4,6 @@ author: 'Lucas Eras Paiva'
 
 ---
 
-For digital art.
+![Trump](/projects/brazil/trump.png)
+
+![Bolsonaro](/projects/brazil/bolso.png)

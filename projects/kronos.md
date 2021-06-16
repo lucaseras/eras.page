@@ -4,4 +4,4 @@ author: 'Lucas Eras Paiva'
 
 ---
 
-For digital art as well
+![Kronos](/projects/kronos/combination.png)

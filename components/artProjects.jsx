@@ -13,9 +13,15 @@ const projects = [
         image: "/projects/kronos/kronos.png"
     },
     {
+        title: "Airplanes",
+        description: "An animated version of a publicly available airport poster",
+        link: '/projects/airplanes',
+        image: "/projects/airplanes/airplanes.gif"
+    },
+    {
         title: "Node",
         description: "A speculative fiction project in which people have embraced brain-node technologies",
-        link: '/projects/solidworks',
+        link: '/projects/node',
         image: "/projects/node/node.png"
     },
 ]
